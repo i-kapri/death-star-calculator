@@ -1,1 +1,78 @@
-/* You can add global styles to this file, and also import other style files */
+// Imports a prebuilt theme for the application.
+@import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+// Sets the global stylings of the document body.
+body {
+   margin         : 0;
+   font-family    : Arial, Helvetica, sans-serif;
+   background-size: cover;
+}
+
+// Disables highlighting except for the input elements.
+body:not(input) {
+   // in the iOS Safari
+   -webkit-touch-callout: none;
+   // in Safari
+   -webkit-user-select  : none;
+   // in Konqueror HTML
+   -khtml-user-select   : none;
+   // in old versions of Firefox
+   -moz-user-select     : none;
+   // in Internet Explorer/Edge
+   -ms-user-select      : none;
+   // in non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox
+   user-select          : none;
+}
+
+// Configures the stylings of the material icons.
+@font-face {
+   font-family: 'Material Icons';
+   font-style : normal;
+   font-weight: 400;
+   src        : url(./assets/styles/material-icons.woff2) format('woff2');
+}
+
+// Defines some basic stylings for the material icons.
+.material-icons {
+   font-family                  : 'Material Icons';
+   font-weight                  : normal;
+   font-style                   : normal;
+   font-size                    : 24px;
+   line-height                  : 1;
+   letter-spacing               : normal;
+   text-transform               : none;
+   display                      : inline-block;
+   white-space                  : nowrap;
+   word-wrap                    : normal;
+   direction                    : ltr;
+   -webkit-font-feature-settings: 'liga';
+   font-feature-settings        : 'liga';
+   -webkit-font-smoothing       : antialiased;
+}
+
+// Customizes the border radius of material buttons.
+.mat-button,
+.mat-icon-button,
+.mat-stroked-button,
+.mat-flat-button,
+.mat-form-field-appearance-fill,
+.mat-form-field-flex {
+   border-radius: 0px !important;
+}
+
+// Customizes the autocomplete panel overlay.
+.mat-autocomplete-panel {
+   border-bottom-left-radius : 0px !important;
+   border-bottom-right-radius: 0px !important;
+}
+
+// Customizes the angular material list component.
+.mat-list-base .mat-list-item,
+.mat-list-base .mat-list-option {
+   height: 32px !important;
+}
+
+// Customizes the container of the material dialog component.
+.mat-dialog-container {
+   border-radius: 0px !important;
+}

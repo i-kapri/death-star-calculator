@@ -103,9 +103,21 @@
             ],
             "scripts": []
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
+          }
         }
       }
     }
   },
-  "defaultProject": "death-star-calculator"
+  "defaultProject": "death-star-calculator",
+  "cli": {
+    "defaultCollection": "@angular-eslint/schematics"
+  }
 }

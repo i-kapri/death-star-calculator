@@ -1,0 +1,32 @@
+.sw-wrapper {
+   margin-top  : 52px;
+   margin-left : 25%;
+   margin-right: 25%;
+   padding     : 8px;
+   width       : 50%;
+   box-shadow  : 0px 5px 5px -3px rgb(0 0 0 / 20%), 0px 8px 10px 1px rgb(0 0 0 / 14%), 0px 3px 14px 2px rgb(0 0 0 / 12%);
+   height      : 875px;
+   max-height  : 875px;
+   overflow-y  : auto;
+
+   .sw-toolbar-container {
+      height         : 60px;
+      width          : 100%;
+      display        : flex;
+      justify-content: center;
+      vertical-align : middle;
+      align-items    : center;
+
+      .mat-stroked-button {
+         box-shadow  : 0px 5px 5px -3px rgb(0 0 0 / 20%), 0px 8px 10px 1px rgb(0 0 0 / 14%), 0px 3px 14px 2px rgb(0 0 0 / 12%);
+      }
+   }
+
+   .sw-app-container {
+      margin: 16px;
+
+      table {
+         width: 100%;
+      }
+   }
+}

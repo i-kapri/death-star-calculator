@@ -1,0 +1,224 @@
+{
+  "root": true,
+  "ignorePatterns": [
+    "projects/**/*"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "*.ts"
+      ],
+      "parser": "@typescript-eslint/parser",
+      "parserOptions": {
+        "project": [
+          "tsconfig.json"
+        ],
+        "createDefaultProgram": true
+      },
+      "extends": [
+        "plugin:@angular-eslint/recommended",
+        "plugin:@angular-eslint/template/process-inline-templates"
+      ],
+      "rules": {
+        "@angular-eslint/directive-selector": [
+          "error",
+          {
+            "type": "attribute",
+            "prefix": "sw",
+            "style": "camelCase"
+          }
+        ],
+        "@angular-eslint/component-selector": [
+          "error",
+          {
+            "type": "element",
+            "prefix": "sw",
+            "style": "kebab-case"
+          }
+        ]
+      }
+    },
+    {
+      "files": [
+        "*.html"
+      ],
+      "extends": [
+        "plugin:@angular-eslint/template/recommended"
+      ],
+      "rules": {
+        "for-direction": "error",
+        "getter-return": "error",
+        "no-console": "warn",
+        "no-constant-condition": "off",
+        "no-dupe-args": "error",
+        "no-dupe-keys": "error",
+        "no-duplicate-case": "error",
+        "no-empty": "warn",
+        "no-extra-semi": "error",
+        "no-invalid-regexp": "error",
+        "use-isnan": "error",
+        "accessor-pairs": "off",
+        "curly": "error",
+        "default-case": "error",
+        "default-case-last": "error",
+        "eqeqeq": "error",
+        "max-classes-per-file": [
+          "error",
+          1
+        ],
+        "no-alert": "warn",
+        "no-empty-function": "off",
+        "no-multi-spaces": "error",
+        "no-param-reassign": "off",
+        "no-redeclare": "error",
+        "no-self-assign": "error",
+        "no-self-compare": "error",
+        "yoda": "error",
+        "init-declarations": "off",
+        "no-undef": "off",
+        "no-unused-vars": "error",
+        "no-use-before-define": "error",
+        "array-bracket-newline": [
+          "error",
+          "consistent"
+        ],
+        "array-bracket-spacing": "off",
+        "array-element-newline": [
+          "error",
+          "consistent"
+        ],
+        "block-spacing": "off",
+        "brace-style": "error",
+        "capitalized-comments": "off",
+        "comma-dangle": [
+          "error",
+          "never"
+        ],
+        "comma-spacing": [
+          "error",
+          {
+            "before": false,
+            "after": true
+          }
+        ],
+        "eol-last": "error",
+        "id-length": "off",
+        "indent": [
+          "warn",
+          3,
+          {
+            "SwitchCase": 1
+          }
+        ],
+        "keyword-spacing": [
+          "error",
+          {
+            "before": true
+          }
+        ],
+        "line-comment-position": [
+          "error",
+          {
+            "position": "above"
+          }
+        ],
+        "max-len": [
+          "error",
+          {
+            "code": 200,
+            "comments": 160
+          }
+        ],
+        "max-lines": "off",
+        "max-lines-per-function": "off",
+        "max-params": [
+          "warn",
+          10
+        ],
+        "multiline-comment-style": [
+          "warn",
+          "bare-block"
+        ],
+        "multiline-ternary": "off",
+        "no-inline-comments": "warn",
+        "no-lonely-if": "off",
+        "no-multi-assign": "error",
+        "no-multiple-empty-lines": "error",
+        "no-plusplus": "off",
+        "no-ternary": "off",
+        "no-trailing-spaces": "warn",
+        "object-curly-newline": "off",
+        "object-curly-spacing": "error",
+        "one-var": [
+          "error",
+          "never"
+        ],
+        "padded-blocks": "off",
+        "quotes": [
+          "error",
+          "single",
+          {
+            "allowTemplateLiterals": true
+          }
+        ],
+        "quote-props": [
+          "warn",
+          "as-needed",
+          {
+            "unnecessary": false
+          }
+        ],
+        "semi": [
+          "error",
+          "always"
+        ],
+        "semi-spacing": [
+          "error",
+          {
+            "before": false,
+            "after": true
+          }
+        ],
+        "space-before-blocks": "error",
+        "space-before-function-paren": "off",
+        "space-in-parens": [
+          "error",
+          "never"
+        ],
+        "space-infix-ops": "error",
+        "spaced-comment": [
+          "warn",
+          "always"
+        ],
+        "no-const-assign": "error",
+        "no-dupe-class-members": "off",
+        "no-duplicate-imports": "error",
+        "no-useless-constructor": "off",
+        "no-var": "error",
+        "prefer-const": "error",
+        "sort-imports": [
+          "warn",
+          {
+            "ignoreCase": false,
+            "ignoreDeclarationSort": true,
+            "ignoreMemberSort": false,
+            "memberSyntaxSortOrder": [
+              "none",
+              "all",
+              "multiple",
+              "single"
+            ],
+            "allowSeparatedGroups": false
+          }
+        ],
+        "json/*": [
+          "error",
+          {
+            "allowComments": true
+          }
+        ],
+        "dot-notation": "off"
+      }
+    }
+  ]
+}

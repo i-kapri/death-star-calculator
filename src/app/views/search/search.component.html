@@ -1,0 +1,36 @@
+<div class="sw-wrapper">
+   <div class="sw-app-container">
+      <h3>Suche in Personen-Datenbank</h3>
+
+      <div class="sw-content">
+         <mat-form-field class="sw-autocomplete-field" appearance="fill">
+            <mat-label>Suche..</mat-label>
+            <input matInput aria-label="Suche.." [matAutocomplete]="auto" [formControl]="controlPerson">
+            <mat-error *ngIf="controlPerson.hasError('noResults')">Es wurden keine Personen gefunden.</mat-error>
+            <mat-autocomplete #auto="matAutocomplete" (optionSelected)="onPersonSelected($event)">
+               <mat-option *ngFor="let person of people" [value]="person.name">
+                  <span>{{person.name}}</span>
+               </mat-option>
+            </mat-autocomplete>
+         </mat-form-field>
+
+         <mat-list role="list" class="sw-selected-people" *ngIf="selectedPeople.length > 0">
+            <mat-list-item role="listitem" *ngFor="let person of selectedPeople">{{person.name}}</mat-list-item>
+         </mat-list>
+
+         <div class="sw-volume-button-container" *ngIf="selectedPeople.length > 0">
+            <button mat-stroked-button (click)="onGetVolumeClick()">
+               Volumen berechnen
+            </button>
+         </div>
+
+         <span class="sw-total-volume" *ngIf="showVolume">Das Volumen der Planeten beträgt: {{volume}} &#x33A6;</span>
+
+         <div class="sw-save-button-container" *ngIf="selectedPeople.length > 0">
+            <button mat-stroked-button (click)="onClose()">
+               Berechnung übernehmen
+            </button>
+         </div>
+      </div>
+   </div>
+</div>
