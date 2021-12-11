@@ -9,7 +9,7 @@ export class Person extends EntityBase {
    public eye_color: Nullable<string> = null;
    public birth_year: Nullable<string> = null;
    public gender: Nullable<'male' | 'female' | 'n/a'> = null;
-   public homeworld: Nullable<'male' | 'female' | 'n/a'> = null;
+   public homeworld: Nullable<string> = null;
    public species: Array<string> = [];
    public vehicles: Array<string> = [];
    public starships: Array<string> = [];
